@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            /* whenever you are giving grid you need to specify no of rows and columns */
+            /* 6 div= 2cols & 3rows
+            6 divs=3cols & 2rows
+            so whenever you do something you need to specify col first then rows */
+           display: grid;
+           /* grid-template-columns=width of 1st col, width of 2nd col, so on */
+           /* grid-template-rows=height of 1st row, height of 2nd row,so on */
+           /* so whenever solving grid problem we should not give height nd width to the individual div */
+           
+           grid-template-columns:repeat(3, 1fr);
+           grid-template-rows: repeat(2,100px);
+           /* grid-row-gap: 20px;
+           grid-column-gap:20px ; */
+           /* if gap is equal then simply mention gap */
+           gap: 20px;
+        }
+        .container>div{
+            font-size: 30px;
+            color: #ffeead;
+            text-align: center;
+        }
+        body{
+            background-color: #ffeead;
+            margin: 10px;
+        }
+        .a{
+            background-color: palevioletred;
+        }
+        .b{
+            background-color: blue;
+        }
+        .c{
+            background-color: yellowgreen;
+        }
+        .d{
+            background-color: orange;
+        }
+        .e{
+            background-color: skyblue;
+        }
+        .f{
+            background-color: blueviolet;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a">A</div>
+        <div class="b">B</div>
+        <div class="c">C</div>
+        <div class="d">D</div>
+        <div class="e">E</div>
+        <div class="f">F</div>
+    </div>
+</body>
+</html>
+
+
+fr=fraction
+100%->1fr 1fr-->50% 50%
+100%->1fr 1fr 1fr-->33.33% 33.33% 33.33%
+100%->4fr-->25% 25% 25% 25%
